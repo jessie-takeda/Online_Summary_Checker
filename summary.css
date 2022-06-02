@@ -28,6 +28,7 @@
     margin-top:20px;
     margin-bottom:20px;
     margin: auto;
+    padding: 20px;
 }
 
 .main_stuff .button_class {
@@ -44,8 +45,9 @@
 .results_class {
     border: solid 3px rgba(0, 0, 0, 0.884);
     background-color: rgba(168, 190, 250, 0.884);
-    text-align: center;
+    text-align: left;
     width: 65%;
     margin-top: 20px;
     margin:auto;
+    padding: 20px
 }
