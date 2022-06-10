@@ -187,17 +187,17 @@ function ActuallyCheckP2() {
     var q1_feedback = "";
 
     if (q1_answer.includes("vessel")) {
-       let hateyou = "https://www.thesaurus.com/browse/vessel";
-       let hateyoumore = hateyou.link("https://www.thesaurus.com/browse/vessel");
-        q1_feedback = q1_feedback + "Please find a synonym for 'vessel,' " + hateyoumore ;
+       let hateyou = "https://www.thesaurus.com/browse/vessel" ;
+       let hateyoumore = hateyou.link("https://www.thesaurus.com/browse/vessel") ;
+        q1_feedback = q1_feedback + "Please find a synonym for <i>vessel</i>:" +   hateyoumore  ; 
     }  
     if (q1_answer.includes("help")) { 
-        let hateyou = "https://www.thesaurus.com/browse/help";
-       let hateyoumore = hateyou.link("https://www.thesaurus.com/browse/help");
-        q1_feedback = q1_feedback + "Please find a synonym for 'help,' " + hateyoumore ;
+        let hateyou = "https://www.thesaurus.com/browse/help" ;
+       let hateyoumore = hateyou.link("https://www.thesaurus.com/browse/help") ;
+        q1_feedback = q1_feedback + "Please find a synonym for 'help' " + hateyoumore ; 
     }
     if (q1_answer.includes("that was built") | q1_answer.includes("which was built")){
-        q1_feedback = q1_feedback + "Reduce the phrase 'that was built' to 'built' "
+        q1_feedback = q1_feedback + " Reduce the phrase 'that was built' to 'built.' " 
     }
     if (q1_feedback == "") {
 
@@ -618,7 +618,7 @@ function CheckExtra(){
 
 function SetTheParameters(){
     if (stageNo == 0){
-        document.getElementById('extra_directions').innerHTML="Begin by changing the parts of speech of the underlined words";
+        document.getElementById('extra_directions').innerHTML="Begin by changing the parts of speech of the underlined words. Use suffixes on page 12 and 13 in your Pathways Textbook to help you.";
         document.getElementById('eq1_label').innerHTML="While it is a <u>rarity</u> for orcas to attack humans in the wild, four humans have been killed due to <u>interacting</u> with orcas that were in <u>captivity.</u>";
         document.getElementById('eq2_label').innerHTML="David Scott, who is an astronaut from <u>America</u>, was accepted by the US Military Academy in 1954, and he became the seventh person to walk on the moon in 1967 thanks to the <u>intense</u> training that he received there.";
         document.getElementById('eq1p1_example').style.display="none";
@@ -627,7 +627,7 @@ function SetTheParameters(){
     document.getElementById('check_extra_back').style.display="none";
     document.getElementById('check_extra_next').style.display="inline";
     } else if (stageNo == 1) {
-        document.getElementById('extra_directions').innerHTML="Now change the voice or move the subjects and objects of the underlined sections";
+        document.getElementById('extra_directions').innerHTML="Now change the voice or move the subjects and objects of the underlined sections.";
         document.getElementById('eq1_label').innerHTML="While it is rare for orcas to attack humans in the wild, four humans <u>have been killed due to</u> interactions with orcas that were captive.";
         document.getElementById('eq2_label').innerHTML="David Scott, who is an American astronaut, <u>was accepted</u> by the US Military Academy in 1954, and he became the seventh person to walk on the moon in 1967 thanks to the intensive training that he received there.";
         document.getElementById('eq1p1_example').style.display="none";
@@ -635,7 +635,7 @@ function SetTheParameters(){
         document.getElementById('check_extra_back').style.display="inline";
         document.getElementById('check_extra_next').style.display="inline";
     } else if (stageNo == 2) {
-        document.getElementById('extra_directions').innerHTML="Now reduce or rephrase the underlined sections";
+        document.getElementById('extra_directions').innerHTML="Now reduce or rephrase the underlined sections.";
         document.getElementById('eq1_label').innerHTML="While <u>it is rare for orcas to attack humans</u> in the wild, interactions with <u>orcas that were captive</u> have killed four humans.";
         document.getElementById('eq2_label').innerHTML="In 1954, the US Military Academy accepted David Scott, <u>who is an American astronaut</u>, <u>and he</u> became the seventh person to walk on the moon in 1967 thanks to the intensive training <u>that he received there</u>.";
         document.getElementById('eq1p1_example').style.display="none";
@@ -643,7 +643,7 @@ function SetTheParameters(){
         document.getElementById('check_extra_back').style.display="inline";
         document.getElementById('check_extra_next').style.display="inline";
     } else if (stageNo == 3) {
-        document.getElementById('extra_directions').innerHTML="Finally, replace the underlined words or phrases with synonyms";
+        document.getElementById('extra_directions').innerHTML="Finally, replace the underlined words or phrases with synonyms. To find synonyms, use an online thesaurus or look on pages 14-16 in your Pathways textbook.";
         document.getElementById('eq1_label').innerHTML="<u>While</u> <u>orca</u> attacks on humans are <u>rare</u> in the wild, interactions with captive orcas have killed four <u>humans</u>.";
         document.getElementById('eq2_label').innerHTML="In 1954, the US Military Academy <u>accepted</u> David Scott, an American astronaut, who became the seventh <u>person</u> to <u>walk</u> on the moon in 1967 <u>thanks</u> to receiving intensive training there.";
         document.getElementById('eq1p1_example').style.display="none";

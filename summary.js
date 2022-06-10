@@ -210,12 +210,12 @@ function Check_Now(){
     var originality_3 = (1- percentage_3).toFixed(4);
     var xValues = ["Percent Repeated", "Percent Original Writing"];
     var yValues = [percentage_3, originality_3];
-    var barColors = ["red", "blue"]
+    var barColors = ["blue", "green"]
     new Chart("myChart", {type: "doughnut", data: {labels: xValues, datasets: [{backgroundColor: barColors, data: yValues}]},options: {title: {display: true, text: "Percentage of Your Summary that was Original Writing"}}});
-    var xBars = ["Maximum Appropriate Length", "Your Text Length", "Minimum Appropriate Length"];
+    var xBars = ["Maximum Summary Length", "Your Text Length", "Minimum Summary Length"];
     var yBars = [(original_length*0.4).toFixed(0), summary_length, (original_length*0.25).toFixed(0)];
-    var barColors2 = ["green", "red", "blue", "red"];
-    new Chart("myLength", {type: "bar", data: {labels: xBars, datasets: [{backgroundColor: barColors2, data: yBars, minBarLength: 10, label: 'Number of Words:'}]},options: {title: {display: true, text: "Length of Original Text Versus Your Summary"}}});
+    var barColors2 = ["green", "blue", "lightgreen", "yellow"];
+    new Chart("myLength", {type: "bar", data: {labels: xBars, datasets: [{backgroundColor: barColors2, data: yBars, minBarLength: 20, label: 'Summary Length'}]},options: {title: {display: true, text: "Length of Original Text Versus Your Summary"}}});
     
     if (percentage < 0.25) {
         advice_length = "Your summary is too short."
