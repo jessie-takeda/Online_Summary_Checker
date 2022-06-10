@@ -218,37 +218,30 @@ function Check_Now(){
     new Chart("myLength", {type: "bar", data: {labels: xBars, datasets: [{backgroundColor: barColors2, data: yBars, minBarLength: 20, label: 'Summary Length'}]},options: {title: {display: true, text: "Length of Original Text Versus Your Summary"}}});
     
     if (percentage < 0.25) {
-        advice_length = "Your summary is too short."
-        advice_length2 = "A good summary is about 25%-35% the length of the orignial text. Try to include a few more details about main points."
+        advice_length = "Summary Length: Your summary is too short. Please write more and try to include a few more details about main points."
     }
     else if (percentage > 0.4) {
-        advice_length = "Your summary is too long."
-        advice_length2 = "A good summary is about 25%-35% the length of the orignial text. Try to reduce some details without deleting any of the main points."    
+        advice_length = "Summary Length: Your summary is too long. Please reduce some of the detailed information without deleting any of the main points."
     }
     else {
-        advice_length = "Good summary length!"
-        advice_length2 = "A good summary is about 25%-35% the length of the orignial text."
-    }
-    if (counter5 > 0 | percentage_3 > 0.1) {
-        advice_repeats1 = "Your summary repeats too much of the original text."
-    } else {
-        advice_repeats1 = "Your summary doesn't repeat too much of the original text!"
+        advice_length = "Great job! Your summary is an appropriate length."
     }
     if (counter5 > 0) {
-        advice_repeats2 = "Your summary contains " + counter5 + " five-word chunk repeats from the original! You should never copy five or more words from the original! "
-        resulty = repeats_5;
-    } else {
-        resulty = "None - good job!"
+        advice_repeats1 = "Copied Words: Your summary contains " + counter5 + " instances of 5-word chunk repeats from the original. You should not copy 5 or more words in a row from the original. Please rewrite those sections in your own words or rephrase them using the advice in Chapter 4 of Pathways to Academic English."
+    }
+    else {
+        advice_repeats1 = "Great job! Your summary does not contain any instances of 5-word chunk repeats from the original."
     }
 
     if (percentage_3 > 0.1) {
-        advice_repeats2 = advice_repeats2 + "Your summary also contains too many 3-word chunk repeats from the original. Use more paraphrasing techniques as suggested in Chapter 4 of Pathways to Academic English."
+        advice_repeats2 = "Copied Words: Your summary contains " + counter + " instances of 3-word chunk repeats from the original, which is too many. Try to rephrase some of your repeated 3-word chunks by using the advice in Chapter 4 of Pathways to Academic English."
     }
-   
-    document.getElementById('results_length').innerHTML = advice_length;
-    document.getElementById('length_advice').innerHTML = advice_length2;
-    document.getElementById('results_repeating').innerHTML = advice_repeats1;
-    document.getElementById('repeats_advice').innerHTML = advice_repeats2;
-    document.getElementById('repeats_text').innerHTML = resulty;
+    else {
+        advice_repeats2 = "Great job! Your summary contains only " + counter + " instances of 3-word chunk repeats from the original, but this is an acceptable amount."
+    }
+
+    var resulty = advice_length + "<br>" + "<br>" + advice_repeats1 + "<br>" + "<br>" + advice_repeats2 + "<br>" + "<br>" + "Your 5-word chunk repeats:" + "<br>" + "<br>" + repeats_5 + "<br>" + "<br>" + "Your 3-word chunk repeats:" + "<br>" + "<br>" + repeats_3;
+
+    document.getElementById('results_text').innerHTML = resulty;
 }
 
