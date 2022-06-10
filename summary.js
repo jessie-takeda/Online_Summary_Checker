@@ -240,7 +240,7 @@ function Check_Now(){
         advice_repeats2 = "Great job! Your summary contains only " + counter + " instances of 3-word chunk repeats from the original, but this is an acceptable amount."
     }
 
-    var resulty = advice_length + "<br>" + "<br>" + advice_repeats1 + "<br>" + "<br>" + advice_repeats2 + "<br>" + "<br>" + "Your 5-word chunk repeats:" + "<br>" + "<br>" + repeats_5 + "<br>" + "<br>" + "Your 3-word chunk repeats:" + "<br>" + "<br>" + repeats_3;
+    var resulty = advice_length + "<br>" + "<br>" + advice_repeats1 + "<br>" + "<br>" + advice_repeats2 + "<br>" + "<br>" + "Your 5-word chunk repeats:" + "<br>" + "<br>" + repeats_5 + "<br>" + "<br>" + "Your 3-word chunk repeats:" + "<br>"
 
     document.getElementById('results_text').innerHTML = resulty;
 }

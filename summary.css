@@ -45,7 +45,7 @@
 .results_class {
     border: solid 3px rgba(0, 0, 0, 0.884);
     background-color: rgba(168, 190, 250, 0.884);
-    text-align: left;
+    text-align: center;
     width: 65%;
     margin-top: 20px;
     margin:auto;
